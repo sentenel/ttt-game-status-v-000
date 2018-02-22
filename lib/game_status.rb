@@ -13,5 +13,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.all?{|index| ["X", "O"].include?(board[index])}
+  board.all?{|position| ["X", "O"].include?(position)}
 end
