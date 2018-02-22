@@ -11,3 +11,7 @@ def won?(board)
     combination.all? {|index| board[index] == "X"} || combination.all? {|index| board[index] == "O"}
   end
 end
+
+def full?(board)
+  board.all?{|index| position_taken?(board, index)}
+end
