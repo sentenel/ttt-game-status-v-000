@@ -15,3 +15,7 @@ end
 def full?(board)
   board.all?{|position| ["X", "O"].include?(position)}
 end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
