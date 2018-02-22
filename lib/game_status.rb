@@ -8,10 +8,10 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 
 def won?(board)
   WIN_COMBINATIONS.detect do |combination|
-    combination.all? {|index| board[index] == "X"} || combination.all? {|index| board[index] == "O"}
+    combination.all?{|index| board[index] == "X"} || combination.all?{|index| board[index] == "O"}
   end
 end
 
 def full?(board)
-  board.all? {|index| position_taken?(board, index)}
+  board.all?{|index| position_taken?(board, index)}
 end
