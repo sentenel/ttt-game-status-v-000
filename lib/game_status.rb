@@ -7,11 +7,7 @@ end
 WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
 def won?(board)
-  winning_combination = nil
-  WIN_COMBINATIONS.each do |combination|
-    if combination.all? {|index| board[index] == "X"} || combination.all? {|index| board[index] == "O"}
-      winning_combination = combination
-    end
+  WIN_COMBINATIONS.detect? do |combination|
+    combination.all? {|index| board[index] == "X"} || combination.all? {|index| board[index] == "O"}
   end
-  winning_combination
 end
