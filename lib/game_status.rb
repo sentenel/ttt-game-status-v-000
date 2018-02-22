@@ -25,5 +25,5 @@ def over?(board)
 end
 
 def winner(board)
-  board[won?(board)[0]]
+  draw? ? nil : board[won?(board)[0]]
 end
